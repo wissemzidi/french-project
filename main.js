@@ -29,7 +29,7 @@ window.addEventListener("scroll", (e) => {
     header.style.backgroundColor = "rgba(255, 255, 255, 0.05)";
     navLis.forEach((ele) => {
       ele.children[0].style.color = "black";
-      ele.children[0].style.backgroundColor = "white";
+      ele.children[0].style.backgroundColor = "rgba(255, 255, 255, 0.8)";
     });
   }
 });
