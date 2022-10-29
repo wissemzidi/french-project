@@ -33,3 +33,16 @@ window.addEventListener("scroll", (e) => {
     });
   }
 });
+
+//
+//
+//
+const aside = document.getElementById("aside");
+
+function showAside() {
+  aside.removeAttribute("hidden");
+}
+
+function closeAside() {
+  aside.setAttribute("hidden", "");
+}

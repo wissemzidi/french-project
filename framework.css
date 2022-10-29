@@ -187,6 +187,15 @@
   margin-top: 30px;
 }
 
+.mt-60 {
+  margin-top: 60px;
+}
+@media screen and (max-width: 1000px) {
+  .mt-60 {
+    margin-top: 0;
+  }
+}
+
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -295,6 +304,10 @@
   color: var(--clr-font);
 }
 
+.c-white {
+  color: white;
+}
+
 .c-back {
   color: var(--clr-background);
 }
@@ -339,7 +352,7 @@
   text-decoration: none;
 }
 
-.txt-c {
+.text-c {
   text-align: center;
 }
 /* end text decoration */

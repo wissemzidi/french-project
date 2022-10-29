@@ -1,5 +1,5 @@
 * {
-  font-family: "poppins", sans-serif;
+  font-family: "monoscope", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,9 +7,25 @@
 }
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  position: relative;
+}
+html::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  background-image: url("./assets/img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
 }
 body {
+  margin-inline: auto;
   position: relative;
+  width: 100%;
+  /* max-width: 95rem; */
 }
 body::-webkit-scrollbar {
   min-width: 4px;
@@ -24,17 +40,6 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-thumb:hover {
   background-color: rgb(70, 70, 70, 0.9);
-}
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  height: 100vh;
-  background-image: url("./assets/img/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
 }
 
 @keyframes slideIn-toTop {
@@ -84,6 +89,23 @@ main {
   position: relative;
 }
 
+#aside {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+  background-image: linear-gradient(to bottom right, white, rgb(30, 105, 190));
+  animation: slideIn-toBottom 0.3s ease-out forwards;
+  z-index: 3;
+}
+
+#aside .content {
+  margin-left: auto;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -92,6 +114,20 @@ header {
   z-index: 2;
   animation: slideIn-toBottom 0.3s ease-out;
   transition: background-color 0.3s ease-out;
+}
+
+#show-aside {
+  position: fixed;
+  left: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#close-aside {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 #title {
@@ -161,30 +197,366 @@ header {
   }
 }
 
-#section1 > #article2 {
-  min-height: fit-content;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-}
-
 #mouse-scroll {
   margin-top: 25vh;
 }
 
 #section2 {
+  display: flex;
+  flex-wrap: wrap;
   min-height: 100vh;
-  display: grid;
-  justify-items: center;
-  align-content: center;
+  max-width: 95rem;
+  margin-inline: auto;
+  padding-block: 5rem;
+  padding-inline: 0.5rem;
 }
 
+.sec2-article {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  flex-grow: 0;
+  gap: 4rem;
+}
+
+.sec2-article .card {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  max-width: 30rem;
+  padding-block: 2rem;
+  background-color: red;
+  backdrop-filter: blur(1px);
+  isolation: isolate;
+  color: white;
+  line-height: 2.5ch;
+}
+
+.sec2-article .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.61);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.sec2-article .card:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-image: url("./assets/img/avion.jpg");
+  border-radius: inherit;
+  z-index: -2;
+  filter: grayscale(50%);
+}
+
+.sec2-article .card:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-image: url("./assets/img/organisation-voyage.jpg");
+  border-radius: inherit;
+  z-index: -2;
+  filter: grayscale(50%);
+}
+
+.sec2-article .card:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-image: url("./assets/img/voyagiste.jpg");
+  border-radius: inherit;
+  z-index: -2;
+  filter: grayscale(50%);
+}
+
+.sec2-article .card:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-image: url("./assets/img/voyageur.jpg");
+  border-radius: inherit;
+  z-index: -2;
+  filter: grayscale(50%);
+}
+
+.sec2-article .card .header {
+  padding-bottom: 2rem;
+}
+
+.sec2-article .card .footer {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.sec2-article .card .footer__btn {
+  padding: 0.7rem;
+  border-radius: 50px;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color ease-out 0.2s;
+}
+
+.sec2-article .card:hover .footer__btn {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+/* 
+
+
+
+
+
+
+
+
+*/
+#wave {
+  margin-bottom: -5px;
+}
+/* section 3 */
+#section3 {
+  padding-bottom: 15rem;
+  padding-top: 1rem;
+  width: 100%;
+  /* min-height: 70vh; */
+  background-color: #0099ff;
+  color: white;
+}
+
+#section3 #causes-container {
+  width: 100%;
+  max-width: 95rem;
+  min-height: 150px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1500px) {
+  #section3 #causes-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #section3 #causes-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  #section3 .cause {
+    translate: auto 0 !important;
+  }
+
+  #section3 h2 {
+    translate: 0 -5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #section3 .cause:nth-child(2n + 1) {
+    translate: 10px 0 !important;
+  }
+  #section3 .cause:nth-child(2n + 2) {
+    translate: -20px 0 !important;
+  }
+  #section3 .cause {
+    gap: 40rem !important;
+  }
+}
+
+#section3 .cause {
+  margin-inline: auto;
+  position: relative;
+  width: fit-content;
+  padding-inline: 1rem;
+  padding-block: 0.25rem;
+  background-color: white;
+  border-radius: 50px;
+  color: black;
+}
+
+#section3 .cause:nth-child(1) {
+  translate: 50px 5px;
+}
+
+#section3 .cause:nth-child(2) {
+  translate: 20px 20px;
+}
+
+#section3 .cause:nth-child(3) {
+  translate: -50px -5px;
+}
+
+#section3 .cause:nth-child(4) {
+  translate: 100px 190px;
+}
+
+#section3 .cause:nth-child(5) {
+  translate: -15px 100px;
+}
+
+#section3 .cause:nth-child(6) {
+  translate: 5px 130px;
+}
+
+#section3 .cause:nth-child(7) {
+  translate: 5px 200px;
+}
+
+#section3 .cause:nth-child(8) {
+  translate: 5px 100px;
+}
+
+#section3 .cause::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: -19px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  clip-path: polygon(0 0, 100% 0, 50% 50%, 0 0);
+}
+/* 
+
+
+
+
+
+
+*/
+/* section 4 */
+#section4 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  min-height: 97vh;
+}
+
+#sec4-container {
+  width: 100%;
+  max-width: 95rem;
+  padding-inline: 0.5rem;
+}
+
+#books-container {
+  width: 100%;
+  padding-block: 3rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  #books-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 650px) {
+  #books-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+#books-container .book {
+  position: relative;
+  width: 100%;
+  max-width: 20rem;
+  aspect-ratio: 9 / 12;
+  border-radius: 10px;
+  transition: 0.2s rotate ease-out;
+}
+
+#books-container .book:hover {
+  rotate: 2deg;
+}
+
+#books-container .book .content {
+  height: 100%;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#books-container .book:nth-child(1) .content {
+  background-image: url("./assets/img/9782379165573_1_75.jpg");
+}
+
+#books-container .book:nth-child(2) .content {
+  background-image: url("./assets/img/voyage book 1.webp");
+}
+
+#books-container .book:nth-child(3) .content {
+  background-image: url("./assets/img/voyage book2.webp");
+}
+
+#books-container .book:nth-child(4) .content {
+  background-image: url("./assets/img/comment chier dans les bois.webp");
+}
+
+#books-container .book:nth-child(5) .content {
+  background-image: url("./assets/img/le monde.webp");
+}
+
+#books-container .book:nth-child(6) .content {
+  background-image: url("./assets/img/ou partir quand.webp");
+}
+
+#books-container .book .footer {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  translate: 0 -50%;
+  margin-inline: auto;
+  height: fit-content;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+}
+
+#books-container .book .footer a {
+  color: lime;
+  text-decoration: none;
+}
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+/* footer */
 #to-top {
   position: sticky;
   padding-block: 0.1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.25rem;
   padding-inline: 0.25rem;
   top: 95vh;
+  bottom: 0;
   right: 0.5rem;
   left: 95vw;
   background-color: black;
