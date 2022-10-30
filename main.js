@@ -46,3 +46,5 @@ function showAside() {
 function closeAside() {
   aside.setAttribute("hidden", "");
 }
+
+console.log(document.body.scrollHeight);

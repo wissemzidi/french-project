@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Voyage</title>
   </head>
-  <body>
+  <body style="background-color: rgb(250, 250, 250)">
     <a id="go-to-content" href="#section1" hidden>Go to main content</a>
     <a id="top"></a>
     <!--  
@@ -37,6 +37,7 @@
             <li><a href="#section2">Definition</a></li>
             <li><a href="#section3">Cause</a></li>
             <li><a href="#section4">Livres</a></li>
+            <li><a href="#section5">Pour Visite</a></li>
             <li><a href="#footer">...</a></li>
           </ul>
         </div>
@@ -49,23 +50,22 @@
 
     -->
     <!-- header -->
-    <header
-      id="header"
-      class="d-flex align-c justify-sb p-10 pr-30 pl-30 center-700"
-    >
-      <button id="show-aside" onclick="showAside()">
-        <img height="25px" src="./assets/svg/burger.svg" alt="" />
-      </button>
-      <h1 id="title" class="fs-24 c-back">Le Voyage</h1>
-      <nav class="dno-700">
-        <ul class="nav | d-flex justify-c gap-10 no-list">
-          <li><a href="#top">Home</a></li>
-          <li><a href="#section2">Definition</a></li>
-          <li><a href="#section3">Cause</a></li>
-          <li><a href="#section4">Livres</a></li>
-          <li><a href="#footer">...</a></li>
-        </ul>
-      </nav>
+    <header id="header">
+      <div class="d-flex align-c justify-sb p-10 pr-30 pl-30 center-700">
+        <button id="show-aside" onclick="showAside()">
+          <img height="25px" src="./assets/svg/burger.svg" alt="" />
+        </button>
+        <h1 id="title" class="fs-24 c-back">Le Voyage</h1>
+        <nav class="dno-700">
+          <ul class="nav | d-flex justify-c gap-10 no-list">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#section2">Definition</a></li>
+            <li><a href="#section3">Cause</a></li>
+            <li><a href="#section4">Livres</a></li>
+            <li><a href="#footer">...</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- 
 
@@ -366,9 +366,75 @@
           </div>
         </div>
       </section>
+      <!--  
+  
+  
+  
+  
+  
+  
+  
+  
+      -->
+      <hr />
+      <!-- section 5 -->
+      <section id="section5">
+        <div>
+          <center class="pb-20 pt-20">
+            <h2 class="fw-bolder w-fit p-5 pr-20 pl-20">
+              meilleurs endroits à visiter dans le <wbr />monde :
+            </h2>
+          </center>
+          <br />
+          <div id="places">
+            <a href="#" class="place">
+              <div>
+                <span>
+                  Temples d'Angkor, le paradis Hindou sur Terre (Cambodge)
+                </span>
+              </div>
+            </a>
+            <a href="#" class="place">
+              <div>
+                <span>
+                  Grande Barrière de corail, un eldorado sous-marin (Australie)
+                </span>
+              </div>
+            </a>
+            <a href="#" class="place">
+              <div>
+                <span>Machu Picchu, l'énigme inca (Pérou)</span>
+              </div>
+            </a>
+            <a href="#" class="place">
+              <div>
+                <span
+                  >Grande Muraille de Chine, muraille impériale (Chine)</span
+                >
+              </div>
+            </a>
+            <a href="#" class="place">
+              <div>
+                <span>Taj Mahal, la perle Moghole (Inde)</span>
+              </div>
+            </a>
+            <a href="#" class="place">
+              <div>
+                <span>
+                  Grand Canyon National Park, un spectacle naturel d'exception
+                  (États-Unis)
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+
+      <!-- end main -->
     </main>
     <!--  
-
 
 
 

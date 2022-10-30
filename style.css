@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-snap-type: proximity;
 }
 html {
   scroll-behavior: smooth;
@@ -25,7 +24,6 @@ body {
   margin-inline: auto;
   position: relative;
   width: 100%;
-  /* max-width: 95rem; */
 }
 body::-webkit-scrollbar {
   min-width: 4px;
@@ -85,7 +83,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 main {
-  min-height: 200vh;
   position: relative;
 }
 
@@ -116,12 +113,25 @@ header {
   transition: background-color 0.3s ease-out;
 }
 
+header > div {
+  width: 100%;
+  max-width: 95rem;
+  margin-inline: auto;
+}
+
 #show-aside {
+  display: none;
   position: fixed;
   left: 0.5rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  #show-aside {
+    display: block;
+  }
 }
 
 #close-aside {
@@ -448,6 +458,7 @@ header {
 #sec4-container {
   width: 100%;
   max-width: 95rem;
+  margin-inline: auto;
   padding-inline: 0.5rem;
 }
 
@@ -540,6 +551,113 @@ header {
 
 
 
+*/
+/* section 5*/
+/* best places to visit */
+#section5 {
+  width: 100%;
+  padding-block: 3rem;
+}
+
+#section5 > div {
+  width: 100%;
+  max-width: 95rem;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+
+#section5 #places {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 3rem;
+  column-gap: 1rem;
+}
+
+@media screen and (max-width: 1300px) {
+  #section5 #places {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #section5 #places {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+  #places .place:hover {
+    scale: 1.01 !important;
+  }
+}
+
+#places .place {
+  position: relative;
+  width: 100%;
+  max-width: 30rem;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.2s ease-out scale;
+}
+
+#places .place:hover {
+  scale: 1.05;
+}
+
+#places .place:nth-child(1) {
+  background-image: url("./assets/img/Temples_d'Angkor.jpg");
+}
+
+#places .place:nth-child(2) {
+  background-image: url("./assets/img/Grande_Barrière.jpg");
+}
+
+#places .place:nth-child(3) {
+  background-image: url("./assets/img/Machu_Picchu.jpg");
+}
+
+#places .place:nth-child(4) {
+  background-image: url("./assets/img/Grande_Muraille.jpg");
+}
+
+#places .place:nth-child(5) {
+  background-image: url("./assets/img/Taj_Mahal.jpg");
+}
+
+#places .place:nth-child(6) {
+  background-image: url("./assets/img/Grand_Canyon.jpg");
+}
+
+#places .place span {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 100%;
+  padding-inline: 5px;
+  padding-block: 1ch;
+  background-color: rgba(0, 0, 0, 0.521);
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: 0.2s ease-out background-color;
+}
+
+#places .place:hover span {
+  background-color: black;
+}
+
+/* 
+
+
+
+
+
+
+
+
 
 
 
@@ -557,7 +675,7 @@ header {
   padding-inline: 0.25rem;
   top: 95vh;
   bottom: 0;
-  right: 0.5rem;
+  right: 1rem;
   left: 95vw;
   background-color: black;
   color: white;
