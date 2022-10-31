@@ -62,6 +62,28 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+@keyframes slideIn-toLeft {
+  from {
+    opacity: 0;
+    translate: 5vw;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes slideIn-toRight {
+  from {
+    opacity: 0;
+    translate: -5vw;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -69,6 +91,16 @@ body::-webkit-scrollbar-thumb:hover {
   to {
     opacity: 1;
   }
+}
+
+.slide-toRight,
+.slide-toLeft,
+.fadeIn {
+  opacity: 0;
+  animation-duration: 0.6s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 #go-to-content {
@@ -109,7 +141,9 @@ header {
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(1px);
   z-index: 2;
-  animation: slideIn-toBottom 0.3s ease-out;
+  opacity: 0;
+  animation: slideIn-toBottom 0.5s ease-out forwards;
+  animation-delay: 0.2s;
   transition: background-color 0.3s ease-out;
 }
 
@@ -162,7 +196,7 @@ header > div {
 #section1 {
   min-height: 95vh;
   position: relative;
-  animation: slideIn-toTop 0.3s ease-out;
+  animation: slideIn-toTop 0.5s ease-out;
 }
 
 #section1 > #article1 {
@@ -487,11 +521,11 @@ header > div {
   max-width: 20rem;
   aspect-ratio: 9 / 12;
   border-radius: 10px;
-  transition: 0.2s rotate ease-out;
+  transition: 0.2s scale ease-out;
 }
 
 #books-container .book:hover {
-  rotate: 2deg;
+  scale: 1.05;
 }
 
 #books-container .book .content {
@@ -591,6 +625,7 @@ header > div {
 }
 
 #places .place {
+  opacity: 0;
   position: relative;
   width: 100%;
   max-width: 30rem;
@@ -599,6 +634,9 @@ header > div {
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.2s ease-out scale;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 #places .place:hover {

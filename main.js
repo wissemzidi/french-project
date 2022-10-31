@@ -11,10 +11,10 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "Tab") {
     if (first == 1) {
       goToContent.removeAttribute("hidden");
+      first--;
     } else {
       goToContent.setAttribute("hidden", "");
     }
-    first--;
   }
 });
 
@@ -47,4 +47,36 @@ function closeAside() {
   aside.setAttribute("hidden", "");
 }
 
-console.log(document.body.scrollHeight);
+let slideToRight = document.querySelectorAll(".slide-toRight");
+window.addEventListener("scroll", (e) => {
+  slideToRight.forEach((ele) => {
+    if (isVisible(ele)) {
+      ele.style.animationName = "slideIn-toRight";
+    }
+  });
+});
+
+let slideToLeft = document.querySelectorAll(".slide-toLeft");
+window.addEventListener("scroll", (e) => {
+  slideToLeft.forEach((ele) => {
+    if (isVisible(ele)) {
+      ele.style.animationName = "slideIn-toLeft";
+    }
+  });
+});
+
+let fadeIn = document.querySelectorAll(".fadeIn");
+window.addEventListener("scroll", (e) => {
+  fadeIn.forEach((ele) => {
+    if (isVisible(ele)) {
+      ele.style.animationName = "fadeIn";
+    }
+  });
+});
+
+function isVisible(ele) {
+  const { top, bottom } = ele.getBoundingClientRect();
+  const vHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  return (top > 0 || bottom > 0) && top < vHeight;
+}
