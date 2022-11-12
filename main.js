@@ -6,15 +6,22 @@ navLis = [...navigationLis];
 
 document.getElementById("to-top").setAttribute("tabIndex", "-1");
 
-let first = 1;
+let is_first = true;
 window.addEventListener("keydown", (e) => {
+  console.log(e.target);
   if (e.key === "Tab") {
-    if (first == 1) {
+    if (is_first) {
       goToContent.removeAttribute("hidden");
-      first--;
+      setTimeout(() => {
+        goToContent.setAttribute("hidden", "");
+      }, 2000);
     } else {
       goToContent.setAttribute("hidden", "");
     }
+    is_first = false;
+  } else if (e.key === "Enter") {
+    goToContent.click();
+    goToContent.setAttribute("hidden", "");
   }
 });
 

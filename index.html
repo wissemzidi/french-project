@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="secondry.css" />
-    <link rel="stylesheet" href="framework.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Voyage</title>
-  </head>
-  <body style="background-color: rgb(250, 250, 250)">
-    <a id="go-to-content" href="#section1" hidden>Go to main content</a>
-    <a id="top"></a>
 
-    <!-- aside -->
-    <aside id="aside" hidden>
-      <div class="d-flex gap-30 align-c">
-        <div class="header | d-flex justify-sb">
-          <button id="close-aside" onclick="closeAside()">
-            <img height="25" src="./assets/svg/exit.svg" alt="Close" />
-          </button>
-        </div>
-        <div class="content">
-          <ul class="nav | d-flex justify-c gap-10 no-list flex-w">
-            <li><a href="#top">Home</a></li>
-            <li><a href="#section2">Definition</a></li>
-            <li><a href="#section3">Cause</a></li>
-            <li><a href="#section4">Livres</a></li>
-            <li><a href="#section5">A Visite</a></li>
-            <li><a href="#footer">...</a></li>
-          </ul>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="secondry.css" />
+  <link rel="stylesheet" href="framework.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Voyage</title>
+</head>
+
+<body style="background-color: rgb(250, 250, 250)">
+  <a id="go-to-content" href="#section2" hidden>Go to main content</a>
+  <a id="top"></a>
+
+  <!-- aside -->
+  <aside id="aside" hidden>
+    <div class="d-flex gap-30 align-c">
+      <div class="header | d-flex justify-sb">
+        <button id="close-aside" onclick="closeAside()">
+          <img height="25" src="./assets/svg/exit.svg" alt="Close" />
+        </button>
       </div>
-    </aside>
-    <!-- 
+      <div class="content">
+        <ul class="nav | d-flex justify-c gap-10 no-list flex-w">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#section2">Definition</a></li>
+          <li><a href="#section3">Cause</a></li>
+          <li><a href="#section4">Livres</a></li>
+          <li><a href="#section5">A Visite</a></li>
+          <li><a href="#section6">Champ lexical</a></li>
+          <li><a href="#footer">...</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <!-- 
 
 
 
 
     -->
-    <!-- header -->
-    <header id="header">
-      <div class="d-flex align-c justify-sb p-10 pr-30 pl-30 center-700">
-        <button id="show-aside" onclick="showAside()">
-          <img height="25px" src="./assets/svg/burger.svg" alt="" />
-        </button>
-        <h1 id="title" class="fs-24 c-back">Le Voyage</h1>
-        <nav class="dno-700">
-          <ul class="nav | d-flex justify-c gap-10 no-list">
-            <li><a href="#top">Home</a></li>
-            <li><a href="#section2">Definition</a></li>
-            <li><a href="#section3">Cause</a></li>
-            <li><a href="#section4">Livres</a></li>
-            <li><a href="#section5">A visiter</a></li>
-            <li><a href="#footer">...</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- 
+  <!-- header -->
+  <header id="header">
+    <div class="d-flex align-c justify-sb p-10 pr-30 pl-30 center-700">
+      <button id="show-aside" onclick="showAside()">
+        <img height="25px" src="./assets/svg/burger.svg" alt="" />
+      </button>
+      <h1 id="title" class="fs-24 c-back">Le Voyage</h1>
+      <nav class="dno-700">
+        <ul class="nav | d-flex justify-c gap-10 no-list">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#section2">Definition</a></li>
+          <li><a href="#section3">Cause</a></li>
+          <li><a href="#section4">Livres</a></li>
+          <li><a href="#section5">A visiter</a></li>
+          <li><a href="#footer">...</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- 
 
 
 
@@ -73,32 +75,29 @@
 
 
     main-->
-    <main>
-      <a id="to-top" href="#top">Top</a>
-      <!-- section1 -->
-      <section id="section1">
-        <article id="article1">
-          <a
-            href="#section2"
-            class="p-10 pr-20 pl-20 rad-20 no-deco c-red fs-24"
-          >
-            Voyager avec nous
-          </a>
-          <a href="#section2">
-            <div id="mouse-scroll">
-              <div class="mouse">
-                <div class="mouse-in"></div>
-              </div>
-              <div>
-                <span class="down-arrow-1"></span>
-                <span class="down-arrow-2"></span>
-                <span class="down-arrow-3"></span>
-              </div>
+  <main>
+    <a id="to-top" href="#top">Top</a>
+    <!-- section1 -->
+    <section id="section1">
+      <article id="article1">
+        <a href="#section2" class="p-10 pr-20 pl-20 rad-20 no-deco c-red fs-24">
+          Voyager avec nous
+        </a>
+        <a href="#section2">
+          <div id="mouse-scroll">
+            <div class="mouse">
+              <div class="mouse-in"></div>
             </div>
-          </a>
-        </article>
-      </section>
-      <!-- 
+            <div>
+              <span class="down-arrow-1"></span>
+              <span class="down-arrow-2"></span>
+              <span class="down-arrow-3"></span>
+            </div>
+          </div>
+        </a>
+      </article>
+    </section>
+    <!-- 
 
 
 
@@ -107,339 +106,169 @@
 
 
       section2-->
-      <section id="section2">
-        <article class="sec2-article">
-          <div
-            class="slide-toRight card | d-grid gap-10 p-20 w-fit bg-l-gray rad-20"
-          >
-            <div class="header">
-              <h3 class="text-c fs-22 fw-bold">Le voyage en vocabulaire</h3>
-            </div>
-            <div class="content">
-              <p class="">
-                Un voyage circulaire qui ramène le voyageur à son point de
-                départ est un <span>«périple»</span>.
-              </p>
-            </div>
-            <div class="footer">
-              <a
-                class="footer__btn | no-deco c-white"
-                href="https://fr.wikipedia.org/wiki/Voyage"
-              >
-                Pour plus d'information
-              </a>
-            </div>
+    <section id="section2">
+      <article class="sec2-article">
+        <div class="slide-toRight card | d-grid gap-10 p-20 w-fit bg-l-gray rad-20">
+          <div class="header">
+            <h3 class="text-c fs-22 fw-bold">Le voyage en vocabulaire</h3>
           </div>
-          <div
-            class="slide-toLeft card | mt-60 d-grid gap-10 p-20 w-fit bg-l-gray rad-20"
-          >
-            <div class="header">
-              <h3 class="text-c fs-22 fw-bold">Que organise les voyage</h3>
-            </div>
-            <div class="content">
-              <p class="">
-                Les professionnels qui organisent et vendent des voyages sont
-                appelés «voyagistes».
-              </p>
-            </div>
-            <div class="footer">
-              <a
-                class="footer__btn | no-deco c-white"
-                href="https://fr.wikipedia.org/wiki/Voyage"
-              >
-                Pour plus d'information
-              </a>
-            </div>
+          <div class="content">
+            <p class="">
+              Un voyage circulaire qui ramène le voyageur à son point de
+              départ est un <span>«périple»</span>.
+            </p>
           </div>
-          <div
-            class="slide-toRight card | d-grid gap-10 p-20 w-fit bg-l-gray rad-20"
-          >
-            <div class="header">
-              <h3 class="text-c fs-22 fw-bold">Voyagistes ?</h3>
-            </div>
-            <div class="content">
-              <p class="">
-                Un voyagiste est une entreprise qui organise des séjours
-                touristiques en assemblant plusieurs prestations de leurs
-                fournisseurs (compagnies aériennes, hôteliers, autocaristes,
-                restaurateurs, guides.
-              </p>
-            </div>
-            <div class="footer">
-              <a
-                class="footer__btn | no-deco c-white"
-                href="https://fr.wikipedia.org/wiki/Voyagiste"
-              >
-                Pour plus d'information
-              </a>
-            </div>
-          </div>
-          <div
-            class="slide-toLeft card | mt-60 d-grid gap-10 p-20 w-fit bg-l-gray rad-20"
-          >
-            <div class="header">
-              <h3 class="text-c fs-22 fw-bold">Voyage touristique ?</h3>
-            </div>
-            <div class="content">
-              <p class="">
-                Le mot tourisme désigne le fait de voyager pour son plaisir hors
-                de ses lieux de vie habituels, et d'y résider de façon
-                temporaire, mais aussi un secteur économique qui comprend en
-                plus de l'hôtellerie l'ensemble des activités liées à la
-                satisfaction et aux déplacements des touristes.
-              </p>
-            </div>
-            <div class="footer">
-              <a
-                class="footer__btn | no-deco c-white"
-                href="https://fr.wikipedia.org/wiki/Tourisme"
-              >
-                Pour plus d'information
-              </a>
-            </div>
-          </div>
-        </article>
-      </section>
-      <!-- 
-
-
-
-      -->
-      <div id="wave">
-        <img src="assets/img/wave.svg" alt="" />
-      </div>
-      <!-- 
-
-
-
-
-      -->
-      <!-- section 3 -->
-      <section id="section3" class="pourquoi-on-voyage">
-        <br />
-        <br />
-        <center><h2>Pourquoi on voyage ?</h2></center>
-        <br />
-        <br />
-        <br />
-        <div id="causes-container">
-          <div class="cause">
-            <div class="cause-content">
-              <p>Pour s'amuser</p>
-            </div>
-            <div class="cause-deco"></div>
-          </div>
-          <div class="cause">
-            <div class="cause-content">
-              <p>Pour apprendre</p>
-            </div>
-            <div class="cause-deco"></div>
-          </div>
-          <div class="cause">
-            <div class="cause-content">
-              <p>Pour se challenger</p>
-            </div>
-            <div class="cause-deco"></div>
-          </div>
-          <div class="cause">
-            <div class="cause-content">
-              <p>Pour vivre la liberté</p>
-            </div>
-            <div class="cause-deco"></div>
-          </div>
-          <div class="cause">
-            <div class="cause-content">
-              <p>Pour faire des rencontres</p>
-            </div>
-            <div class="cause-deco"></div>
-          </div>
-          <div class="cause">
-            <div class="cause-content">
-              <p>Pour reconnecter avec la nature</p>
-            </div>
-            <div class="cause-deco"></div>
-          </div>
-          <div class="cause">
-            <div class="cause-content">
-              <p>Pour se découvrir et être soi-même</p>
-            </div>
-            <div class="cause-deco"></div>
-          </div>
-          <div class="cause">
-            <div class="cause-content">
-              <p>Pour guérir</p>
-            </div>
-            <div class="cause-deco"></div>
-          </div>
-          <div class="cause">
-            <div class="cause-content">
-              <p>Parce qu’on peut !</p>
-            </div>
-            <div class="cause-deco"></div>
-          </div>
-        </div>
-      </section>
-      <!-- 
-
-
-
-      -->
-      <div id="wave">
-        <img src="./assets/img/wave-down(1).svg" alt="" />
-      </div>
-      <!-- section 4 -->
-      <section id="section4" class="sec-book">
-        <center><h2>Des Livres/Histoires pour les lires</h2></center>
-        <div id="sec4-container">
-          <div id="books-container">
-            <div class="book | slide-toRight">
-              <div class="content"></div>
-              <div class="footer">
-                <center>
-                  <p>
-                    Par
-                    <a href="https://fr.wikipedia.org/wiki/Gilles_Treton"
-                      >Gilles Trecton</a
-                    >
-                  </p>
-                </center>
-              </div>
-            </div>
-            <div class="book | fadeIn">
-              <div class="content"></div>
-              <div class="footer">
-                <center>
-                  <p>
-                    Par
-                    <a href="https://www.routard.com/">Le Routard</a>
-                  </p>
-                </center>
-              </div>
-            </div>
-            <div class="book | slide-toLeft">
-              <div class="content"></div>
-              <div class="footer">
-                <center>
-                  <p>
-                    Par
-                    <a href="https://en.wikipedia.org/wiki/Jon_Krakauer"
-                      >Jon Krakauer</a
-                    >
-                  </p>
-                </center>
-              </div>
-            </div>
-            <div class="book | slide-toRight">
-              <div class="content"></div>
-              <div class="footer">
-                <center>
-                  <p>
-                    Par
-                    <a href="https://en.wikipedia.org/wiki/Kathleen_Meyer"
-                      >Kathleen Meyer</a
-                    >
-                  </p>
-                </center>
-              </div>
-            </div>
-            <div class="book | fadeIn">
-              <div class="content"></div>
-              <div class="footer">
-                <center>
-                  <p>
-                    Par
-                    <a href="https://fr.wikipedia.org/wiki/Jules_Verne"
-                      >Jules Verne</a
-                    >
-                  </p>
-                </center>
-              </div>
-            </div>
-            <div class="book | slide-toLeft">
-              <div class="content"></div>
-              <div class="footer">
-                <center>
-                  <p>
-                    Par
-                    <a href="https://en.wikipedia.org/wiki/Stefan_Zweig"
-                      >Stefan Zweig</a
-                    >
-                  </p>
-                </center>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--  
-  
-  
-  
-  
-  
-  
-  
-  
-      -->
-      <hr />
-      <!-- section 5 -->
-      <section id="section5">
-        <div>
-          <center class="pb-20 pt-20">
-            <h2 class="fw-bolder w-fit p-5 pr-20 pl-20">
-              meilleurs endroits à visiter dans le <wbr />monde :
-            </h2>
-          </center>
-          <br />
-          <div id="places">
-            <a href="#" class="place | slide-toRight">
-              <div>
-                <span>
-                  Temples d'Angkor, le paradis Hindou sur Terre (Cambodge)
-                </span>
-              </div>
-            </a>
-            <a href="#" class="place | fadeIn">
-              <div>
-                <span>
-                  Grande Barrière de corail, un eldorado sous-marin (Australie)
-                </span>
-              </div>
-            </a>
-            <a href="#" class="place | slide-toLeft">
-              <div>
-                <span>Machu Picchu, l'énigme inca (Pérou)</span>
-              </div>
-            </a>
-            <a href="#" class="place | slide-toRight">
-              <div>
-                <span
-                  >Grande Muraille de Chine, muraille impériale (Chine)</span
-                >
-              </div>
-            </a>
-            <a href="#" class="place | fadeIn">
-              <div>
-                <span>Taj Mahal, la perle Moghole (Inde)</span>
-              </div>
-            </a>
-            <a href="#" class="place | slide-toLeft">
-              <div>
-                <span>
-                  Grand Canyon National Park, un spectacle naturel d'exception
-                  (États-Unis)
-                </span>
-              </div>
+          <div class="footer">
+            <a class="footer__btn | no-deco c-white" href="https://fr.wikipedia.org/wiki/Voyage">
+              Pour plus d'information
             </a>
           </div>
         </div>
-      </section>
+        <div class="slide-toLeft card | mt-60 d-grid gap-10 p-20 w-fit bg-l-gray rad-20">
+          <div class="header">
+            <h3 class="text-c fs-22 fw-bold">Que organise les voyage</h3>
+          </div>
+          <div class="content">
+            <p class="">
+              Les professionnels qui organisent et vendent des voyages sont
+              appelés «voyagistes».
+            </p>
+          </div>
+          <div class="footer">
+            <a class="footer__btn | no-deco c-white" href="https://fr.wikipedia.org/wiki/Voyage">
+              Pour plus d'information
+            </a>
+          </div>
+        </div>
+        <div class="slide-toRight card | d-grid gap-10 p-20 w-fit bg-l-gray rad-20">
+          <div class="header">
+            <h3 class="text-c fs-22 fw-bold">Voyagistes ?</h3>
+          </div>
+          <div class="content">
+            <p class="">
+              Un voyagiste est une entreprise qui organise des séjours
+              touristiques en assemblant plusieurs prestations de leurs
+              fournisseurs (compagnies aériennes, hôteliers, autocaristes,
+              restaurateurs, guides.
+            </p>
+          </div>
+          <div class="footer">
+            <a class="footer__btn | no-deco c-white" href="https://fr.wikipedia.org/wiki/Voyagiste">
+              Pour plus d'information
+            </a>
+          </div>
+        </div>
+        <div class="slide-toLeft card | mt-60 d-grid gap-10 p-20 w-fit bg-l-gray rad-20">
+          <div class="header">
+            <h3 class="text-c fs-22 fw-bold">Voyage touristique ?</h3>
+          </div>
+          <div class="content">
+            <p class="">
+              Le mot tourisme désigne le fait de voyager pour son plaisir hors
+              de ses lieux de vie habituels, et d'y résider de façon
+              temporaire, mais aussi un secteur économique qui comprend en
+              plus de l'hôtellerie l'ensemble des activités liées à la
+              satisfaction et aux déplacements des touristes.
+            </p>
+          </div>
+          <div class="footer">
+            <a class="footer__btn | no-deco c-white" href="https://fr.wikipedia.org/wiki/Tourisme">
+              Pour plus d'information
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- 
+
+
+
+      -->
+    <div id="wave">
+      <img src="assets/img/wave.svg" alt="" />
+    </div>
+    <!-- 
+
+
+
+
+      -->
+    <!-- section 3 -->
+    <section id="section3" class="pourquoi-on-voyage">
       <br />
       <br />
+      <center>
+        <h2>Pourquoi on voyage ?</h2>
+      </center>
+      <br />
+      <br />
+      <br />
+      <div id="causes-container">
+        <div class="cause">
+          <div class="cause-content">
+            <p>Pour s'amuser</p>
+          </div>
+          <div class="cause-deco"></div>
+        </div>
+        <div class="cause">
+          <div class="cause-content">
+            <p>Pour apprendre</p>
+          </div>
+          <div class="cause-deco"></div>
+        </div>
+        <div class="cause">
+          <div class="cause-content">
+            <p>Pour se challenger</p>
+          </div>
+          <div class="cause-deco"></div>
+        </div>
+        <div class="cause">
+          <div class="cause-content">
+            <p>Pour vivre la liberté</p>
+          </div>
+          <div class="cause-deco"></div>
+        </div>
+        <div class="cause">
+          <div class="cause-content">
+            <p>Pour faire des rencontres</p>
+          </div>
+          <div class="cause-deco"></div>
+        </div>
+        <div class="cause">
+          <div class="cause-content">
+            <p>Pour reconnecter avec la nature</p>
+          </div>
+          <div class="cause-deco"></div>
+        </div>
+        <div class="cause">
+          <div class="cause-content">
+            <p>Pour se découvrir et être soi-même</p>
+          </div>
+          <div class="cause-deco"></div>
+        </div>
+        <div class="cause">
+          <div class="cause-content">
+            <p>Pour guérir</p>
+          </div>
+          <div class="cause-deco"></div>
+        </div>
+        <div class="cause">
+          <div class="cause-content">
+            <p>Parce qu'on peut !</p>
+          </div>
+          <div class="cause-deco"></div>
+        </div>
+      </div>
+    </section>
+    <div id="wave">
+      <img src="./assets/img/wave-down(1).svg" alt="" />
+    </div>
+    <!-- 
 
-      <!-- end main -->
-    </main>
-    <!--  
+
+
+
+
 
 
 
@@ -448,43 +277,262 @@
 
 
     -->
-    <!-- footer -->
-    <footer id="footer" class="not_visible">
-      <div class="footer-dark full-bleed">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-3 item">
-              <h3>Team</h3>
-              <ul>
-                <li>
-                  <a target="_blank" href="https://wissem-zidi-ofc.netlify.app">
-                    Wissem Zidi
-                  </a>
-                </li>
-              </ul>
+    <!--* section 5 -->
+    <section id="section5">
+      <div>
+        <center class="pb-20 pt-20">
+          <h2 class="fw-bolder w-fit p-5 pr-20 pl-20">
+            meilleurs endroits à visiter dans le <wbr />monde :
+          </h2>
+        </center>
+        <br />
+        <div id="places">
+          <a href="#" class="place | slide-toRight">
+            <div>
+              <span>
+                Temples d'Angkor, le paradis Hindou sur Terre (Cambodge)
+              </span>
             </div>
-            <div class="col-sm-6 col-md-3 item">
-              <h3>About</h3>
-              <ul>
-                <li><a href="#">Website</a></li>
-                <li><a href="#">Github</a></li>
-                <li><a href="#">About</a></li>
-              </ul>
+          </a>
+          <a href="#" class="place | fadeIn">
+            <div>
+              <span>
+                Grande Barrière de corail, un eldorado sous-marin (Australie)
+              </span>
             </div>
-          </div>
-          <div class="mt-20 col-sm-6 col-md-3 item">
-            <a
-              class="border bc-white p-10 rad-50 fw-bold"
-              id="email-me"
-              href=""
-            >
-              Email
-            </a>
-          </div>
-          <p class="copyright">Wissem Zidi © 2022</p>
+          </a>
+          <a href="#" class="place | slide-toLeft">
+            <div>
+              <span>Machu Picchu, l'énigme inca (Pérou)</span>
+            </div>
+          </a>
+          <a href="#" class="place | slide-toRight">
+            <div>
+              <span>Grande Muraille de Chine, muraille impériale (Chine)</span>
+            </div>
+          </a>
+          <a href="#" class="place | fadeIn">
+            <div>
+              <span>Taj Mahal, la perle Moghole (Inde)</span>
+            </div>
+          </a>
+          <a href="#" class="place | slide-toLeft">
+            <div>
+              <span>
+                Grand Canyon National Park, un spectacle naturel d'exception
+                (États-Unis)
+              </span>
+            </div>
+          </a>
         </div>
       </div>
-    </footer>
-  </body>
-  <script src="main.js"></script>
+    </section>
+    <!-- 
+      
+      
+
+      -->
+    <br />
+    <hr />
+    <!--* section 4 -->
+    <section id="section4" class="sec-book">
+      <center>
+        <h2>Des Livres/Histoires pour les lires</h2>
+      </center>
+      <div id="sec4-container">
+        <div id="books-container">
+          <div class="book | slide-toRight">
+            <div class="content"></div>
+            <div class="footer">
+              <center>
+                <p>
+                  Par
+                  <a href="https://fr.wikipedia.org/wiki/Gilles_Treton">Gilles Trecton</a>
+                </p>
+              </center>
+            </div>
+          </div>
+          <div class="book | fadeIn">
+            <div class="content"></div>
+            <div class="footer">
+              <center>
+                <p>
+                  Par
+                  <a href="https://www.routard.com/">Le Routard</a>
+                </p>
+              </center>
+            </div>
+          </div>
+          <div class="book | slide-toLeft">
+            <div class="content"></div>
+            <div class="footer">
+              <center>
+                <p>
+                  Par
+                  <a href="https://en.wikipedia.org/wiki/Jon_Krakauer">Jon Krakauer</a>
+                </p>
+              </center>
+            </div>
+          </div>
+          <div class="book | slide-toRight">
+            <div class="content"></div>
+            <div class="footer">
+              <center>
+                <p>
+                  Par
+                  <a href="https://en.wikipedia.org/wiki/Kathleen_Meyer">Kathleen Meyer</a>
+                </p>
+              </center>
+            </div>
+          </div>
+          <div class="book | fadeIn">
+            <div class="content"></div>
+            <div class="footer">
+              <center>
+                <p>
+                  Par
+                  <a href="https://fr.wikipedia.org/wiki/Jules_Verne">Jules Verne</a>
+                </p>
+              </center>
+            </div>
+          </div>
+          <div class="book | slide-toLeft">
+            <div class="content"></div>
+            <div class="footer">
+              <center>
+                <p>
+                  Par
+                  <a href="https://en.wikipedia.org/wiki/Stefan_Zweig">Stefan Zweig</a>
+                </p>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!--* champ lexical du voyage -->
+    <section id="section6" class="pt-60 pb-30">
+      <article class="container">
+        <center>
+          <h2 class="fs-26 clr_linear">Champ lexical du voyage</h2>
+        </center>
+        <div class="cards | p-20 d-grid align-c">
+          <fieldset class="card">
+            <legend>
+              <h4>L'HÉBERGEMENT</h4>
+            </legend>
+            <ul>
+              <li>L'hôtel</li>
+              <li>Le camping</li>
+              <li>L'auberge de jeunesse</li>
+              <li>La location de vacances</li>
+              <li>La chambre d'hôtes</li>
+              <li>La pension</li>
+            </ul>
+          </fieldset>
+          <fieldset class="card">
+            <legend>
+              <h4>LES ACTIVITÉS</h4>
+            </legend>
+            <ul>
+              <li>Aller à la plage</li>
+              <li> Aller à la plage</li>
+              <li> Se baigner</li>
+              <li> Nager</li>
+              <li> Se bronzer</li>
+              <li> Se promener</li>
+              <li> Se reposer / se détendre</li>
+              <li> Faire la grasse matinée</li>
+              <li> Faire du tourisme</li>
+              <li> Faire du sport</li>
+            </ul>
+          </fieldset>
+          <fieldset class="card">
+            <legend>
+              <h4>LES MOYENS DE TRANSPORT</h4>
+            </legend>
+            <ul>
+              <li>La voiture</li>
+              <li>Le train</li>
+              <li>L'avion</li>
+              <li>Le bateau</li>
+              <li>Le bus / le car</li>
+              <li>Le taxi</li>
+            </ul>
+          </fieldset>
+          <fieldset class="card">
+            <legend>
+              <h4>LES OBJETS</h4>
+            </legend>
+            <ul>
+              <li>La valise</li>
+              <li>Le passeport</li>
+              <li>Le visa</li>
+              <li>La carte d'identité</li>
+              <li>L'équipage de main</li>
+              <li>Le sac de voyage</li>
+              <li>L'appareil photo</li>
+              <li>La crème solaire</li>
+              <li>Le parasol </li>
+            </ul>
+          </fieldset>
+        </div>
+      </article>
+    </section>
+
+    <!-- end main -->
+  </main>
+  <!--  
+
+
+
+
+
+
+
+    -->
+  <!-- footer -->
+  <br>
+  <br>
+  <br>
+  <footer id="footer" class="not_visible" style="display: none;">
+    <div class="footer-dark full-bleed">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 item">
+            <h3>Team</h3>
+            <ul>
+              <li>
+                <a target="_blank" href="https://wissem-zidi-ofc.netlify.app">
+                  Wissem Zidi
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-3 item">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Website</a></li>
+              <li><a href="#">Github</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-20 col-sm-6 col-md-3 item">
+          <a class="border bc-white p-10 rad-50 fw-bold" id="email-me" href="">
+            Email
+          </a>
+        </div>
+        <p class="copyright">Wissem Zidi © 2022</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="main.js"></script>
+
 </html>
