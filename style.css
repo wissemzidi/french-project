@@ -482,126 +482,25 @@ header > div {
 
 
 
-*/
-/* section 4 */
-#section4 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  min-height: 97vh;
-}
-
-#sec4-container {
-  width: 100%;
-  max-width: 95rem;
-  margin-inline: auto;
-  padding-inline: 0.5rem;
-}
-
-#books-container {
-  width: 100%;
-  padding-block: 3rem;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-}
-@media screen and (max-width: 1000px) {
-  #books-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 650px) {
-  #books-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-#books-container .book {
-  position: relative;
-  width: 100%;
-  max-width: 20rem;
-  aspect-ratio: 9 / 12;
-  border-radius: 10px;
-  transition: 0.2s scale ease-out;
-}
-
-#books-container .book:hover {
-  scale: 1.05;
-}
-
-#books-container .book .content {
-  height: 100%;
-  background-size: cover;
-  border-radius: 10px;
-}
-
-#books-container .book:nth-child(1) .content {
-  background-image: url("./assets/img/9782379165573_1_75.jpg");
-}
-
-#books-container .book:nth-child(2) .content {
-  background-image: url("./assets/img/voyage book 1.webp");
-}
-
-#books-container .book:nth-child(3) .content {
-  background-image: url("./assets/img/voyage book2.webp");
-}
-
-#books-container .book:nth-child(4) .content {
-  background-image: url("./assets/img/comment chier dans les bois.webp");
-}
-
-#books-container .book:nth-child(5) .content {
-  background-image: url("./assets/img/le monde.webp");
-}
-
-#books-container .book:nth-child(6) .content {
-  background-image: url("./assets/img/ou partir quand.webp");
-}
-
-#books-container .book .footer {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  translate: 0 -50%;
-  margin-inline: auto;
-  height: fit-content;
-  padding: 0.25rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  border-radius: 50px;
-  text-align: center;
-}
-
-#books-container .book .footer a {
-  color: lime;
-  text-decoration: none;
-}
-/* 
-
-
-
-
-
-
 
 
 */
 /* section 5*/
+/** section 4 */
 /* best places to visit */
-#section5 {
+#section4 {
   width: 100%;
   padding-block: 3rem;
 }
 
-#section5 > div {
+#section4 > div {
   width: 100%;
   max-width: 95rem;
   margin-inline: auto;
   padding-inline: 0.5rem;
 }
 
-#section5 #places {
+#section4 #places {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
@@ -610,13 +509,13 @@ header > div {
 }
 
 @media screen and (max-width: 1300px) {
-  #section5 #places {
+  #section4 #places {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 800px) {
-  #section5 #places {
+  #section4 #places {
     grid-template-columns: 1fr;
     row-gap: 1rem;
   }
@@ -702,6 +601,7 @@ header > div {
   text-decoration: none;
   z-index: 1000;
 }
+
 /* 
 
 
@@ -711,28 +611,193 @@ header > div {
 
 
 */
-/** section 6 */
+/** section 5 */
 /** champ lexical */
-#section6 .container {
+#section5 .container {
   width: 100%;
-  justify-content: center;
+  padding-bottom: 5rem;
 }
 
-#section6 .container {
+#section5 .container {
+  width: 100%;
+  max-width: 90rem;
   display: grid;
-  gap: 2rem;
-  width: 100%;
-  justify-content: center;
+  gap: 4rem;
+  margin-inline: auto;
 }
 
-.linear-text {
-  background-image: linear-gradient(
-    -20deg,
-    rgba(255, 0, 0, 0.842) 30%,
-    blue,
-    pink
-  );
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+#section5 .cards {
+  padding-inline: 0.5rem;
+  display: grid;
+  width: 100%;
+  max-width: 50rem;
+  row-gap: 2rem;
+  column-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 500px) {
+  #section5 .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+#section5 .card {
+  padding: 1rem;
+  width: 100%;
+  max-width: 20rem;
+}
+
+#section5 .card legend {
+  padding-inline: 0.5rem;
+}
+
+#section5 .card legend > * {
+  font-style: italic;
+  padding: 0.5rem 0.5rem;
+  background-image: linear-gradient(-20deg, rgb(0, 174, 255), black);
+  background-size: 300%;
+  color: white;
+  border-radius: 50px;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.4s ease-in-out background-size;
+}
+
+#section5 .card:hover legend > * {
+  background-size: 100%;
+}
+
+#section5 .card .list {
+  gap: 1rem;
+  display: grid;
+  list-style: none;
+  justify-content: center;
+  text-align: center;
+}
+
+#section5 .card .list li:nth-child(even) {
+  translate: -15px;
+  padding: 0.2rem 0.5rem;
+  width: fit-content;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 140, 255, 0.575);
+  border-radius: 50px;
+}
+
+#section5 .card .list li:nth-child(odd) {
+  padding: 0.2rem 0.5rem;
+  margin-left: auto;
+  width: fit-content;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 0, 0, 0.678);
+  border-radius: 50px;
+}
+
+/* 
+
+
+
+
+
+
+*/
+
+/* section 4 */
+/** section 6 */
+#section6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  min-height: 97vh;
+}
+
+#sec6-container {
+  width: 100%;
+  max-width: 95rem;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+
+#books-container {
+  width: 100%;
+  padding-block: 3rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  #books-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 650px) {
+  #books-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+#books-container .book {
+  position: relative;
+  width: 100%;
+  max-width: 20rem;
+  aspect-ratio: 9 / 12;
+  border-radius: 10px;
+  transition: 0.2s scale ease-out;
+}
+
+#books-container .book:hover {
+  scale: 1.05;
+}
+
+#books-container .book .content {
+  height: 100%;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#books-container .book:nth-child(1) .content {
+  background-image: url("./assets/img/9782379165573_1_75.jpg");
+}
+
+#books-container .book:nth-child(2) .content {
+  background-image: url("./assets/img/voyage book 1.webp");
+}
+
+#books-container .book:nth-child(3) .content {
+  background-image: url("./assets/img/voyage book2.webp");
+}
+
+#books-container .book:nth-child(4) .content {
+  background-image: url("./assets/img/comment chier dans les bois.webp");
+}
+
+#books-container .book:nth-child(5) .content {
+  background-image: url("./assets/img/le monde.webp");
+}
+
+#books-container .book:nth-child(6) .content {
+  background-image: url("./assets/img/ou partir quand.webp");
+}
+
+#books-container .book .footer {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  translate: 0 -50%;
+  margin-inline: auto;
+  height: fit-content;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+}
+
+#books-container .book .footer a {
+  color: lime;
+  text-decoration: none;
 }
