@@ -445,6 +445,17 @@ body[data-theme="dark"] #aside-list > li {
 
 /* media screen */
 
+@media screen and (max-width: 900px) {
+  .hide-900 {
+    display: none;
+  }
+  .center-900 {
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .dno-700 {
     display: none;
