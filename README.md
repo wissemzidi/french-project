@@ -1,6 +1,6 @@
 # Read Me
 
-## [👀 Live-Server](https://voyage-wissem.netlify.app/)
+## [👀 Live-Server](https://voyagefr.netlify.app/)
 
 <img src="./preview.png" alt="">
 
