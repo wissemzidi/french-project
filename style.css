@@ -132,10 +132,48 @@ main {
   z-index: 3;
 }
 
-#aside .content {
-  margin-left: auto;
+#aside > div {
+  display: grid;
 }
 
+#aside .header {
+  height: 100%;
+}
+
+#aside .content {
+  width: 100%;
+}
+
+#aside .content .nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 550px) {
+  #aside .content .nav {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #aside .content .nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+*/
+/** header */
 header {
   position: sticky;
   top: 0;
