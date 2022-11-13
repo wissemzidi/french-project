@@ -98,7 +98,7 @@ body::-webkit-scrollbar-thumb:hover {
 .fadeIn {
   opacity: 0;
   animation-duration: 0.6s;
-  animation-delay: 0.2s;
+  animation-delay: 0.4s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
@@ -708,13 +708,13 @@ header > div {
 
 /* section 4 */
 /** section 6 */
-#section6 {
+#section7 {
   padding-top: 5rem;
   padding-bottom: 5rem;
   min-height: 97vh;
 }
 
-#sec6-container {
+#sec7-container {
   width: 100%;
   max-width: 95rem;
   margin-inline: auto;

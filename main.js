@@ -8,7 +8,6 @@ document.getElementById("to-top").setAttribute("tabIndex", "-1");
 
 let is_first = true;
 window.addEventListener("keydown", (e) => {
-  console.log(e.target);
   if (e.key === "Tab") {
     if (is_first) {
       goToContent.removeAttribute("hidden");
