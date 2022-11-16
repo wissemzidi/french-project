@@ -1,0 +1,381 @@
+* {
+  font-family: "monoscope", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  position: relative;
+}
+body {
+  margin-inline: auto;
+  position: relative;
+  width: 100%;
+}
+html::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  background-image: url("./assets/main-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+body::-webkit-scrollbar {
+  min-width: 4px;
+  width: 1vw;
+  max-width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(70, 70, 70);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(70, 70, 70, 0.9);
+}
+
+@keyframes slideIn-toTop {
+  from {
+    opacity: 0;
+    translate: 0 100px;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes slideIn-toBottom {
+  from {
+    opacity: 0;
+    translate: 0 -100px;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+#aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 50vh;
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+  padding-bottom: 2rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0) 70%,
+    rgba(0, 0, 0, 0.2),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(2px);
+  animation: slideIn-toBottom 0.3s ease-out forwards;
+  z-index: 3;
+}
+
+#aside > div {
+  display: grid;
+}
+
+#aside .nav {
+  display: grid;
+  gap: 1rem;
+}
+
+#aside li {
+  min-width: 9rem;
+  padding-block: 0.6rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.2s ease-out color, 0.2s ease-out background-color,
+    0.2s ease-out border-color;
+}
+
+#aside li:hover {
+  background-color: rgba(0, 217, 255, 0.1);
+}
+
+#aside a {
+  text-indent: 1rem;
+  color: whitesmoke;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  transition: 0.2s ease-out color;
+}
+
+#aside li:hover a {
+  color: rgb(0, 217, 255);
+}
+
+#aside img {
+  filter: invert(1);
+}
+
+/* 
+
+
+
+
+
+*/
+/** header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  z-index: 2;
+  animation: slideIn-toBottom 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+  transition: background-color 0.3s ease-out;
+}
+
+header > div {
+  width: 100%;
+  max-width: 95rem;
+  margin-inline: auto;
+}
+
+#show-aside {
+  display: none;
+  position: fixed;
+  left: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  #show-aside {
+    display: block;
+  }
+}
+
+#close-aside {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#header .nav li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 0.9rem;
+  background-color: rgba(0, 153, 255, 0.616);
+  border-radius: 50px;
+  padding: 0.4rem 0.8rem;
+  transition: 0.2s ease-out color, background-color 0.2s ease-out;
+}
+
+#header .nav li a:hover {
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+/* 
+
+
+
+
+
+
+
+
+
+*/
+/** section1 */
+#section1 .container {
+  padding-block: 1rem;
+  padding-inline: 0.5rem;
+  height: fit-content;
+  width: fit-content;
+  color: rgb(255, 255, 255);
+  backdrop-filter: blur(1px) grayscale(100%);
+  width: fit-content;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 195, 255, 0.6),
+    rgba(48, 48, 209, 0.6),
+    rgba(83, 0, 238, 0.6),
+    rgba(255, 0, 255, 0.6),
+    rgba(255, 0, 0, 0.6)
+  );
+  background-size: 700%;
+  animation: rainbow 7s ease infinite;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes rainbow {
+  from {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100%;
+  }
+  to {
+    background-position: 0;
+  }
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+*/
+/** section2 */
+#section2 .content img {
+  max-width: 40rem;
+  border-radius: 40px;
+  transition: ease-out scale 0.3s, border-radius ease-out 0.3s;
+}
+#section2 .content img:hover {
+  border-radius: 20px;
+  scale: 1.05;
+}
+
+/*
+
+
+
+
+
+
+
+
+* footer */
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-dark * {
+  color: white;
+}
+
+.full-bleed {
+  box-shadow: 0 0 0 100vmax black;
+  clip-path: inset(0 -100vmax);
+}
+
+.footer-dark {
+  width: 80%;
+  border-top: 1px rgba(41, 41, 41, 0.15) solid;
+  background-color: #000;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.footer-dark h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-dark ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.footer-dark ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.footer-dark .item:not(.social) {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .footer-dark .item:not(.social) {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom: 36px;
+}
+
+.footer-dark .item.text p {
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+.footer-dark .item.social {
+  text-align: center;
+}
+
+.footer-dark .item.social > a {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 8px;
+  color: #000;
+  opacity: 0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity: 0.9;
+}
+
+#email-me {
+  text-decoration: none;
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  padding-inline: 5rem;
+}
+
+#email-me:hover {
+  background-color: red;
+  border-color: red;
+}
+
+.footer-dark .copyright {
+  text-align: center;
+  padding-top: 1.5rem;
+  opacity: 0.5;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+footer::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background-color: white;
+}
