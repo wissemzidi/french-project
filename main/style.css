@@ -243,11 +243,11 @@ header > div {
 /** section2 */
 #section2 .content img {
   max-width: 40rem;
-  border-radius: 40px;
+  border-radius: 20px;
   transition: ease-out scale 0.3s, border-radius ease-out 0.3s;
 }
 #section2 .content img:hover {
-  border-radius: 20px;
+  border-radius: 10px;
   scale: 1.05;
 }
 
