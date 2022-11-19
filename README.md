@@ -36,10 +36,6 @@ This project is an input validation with a styling.
 
 #### API Reference <img src="https://github.com/Wissem-Zidi/icons/blob/main/api.svg" alt="" height="25">
 
-```html
-<p>dummy code</p>
-```
-
 [Back To The Top](#read-me)
 
 ---
