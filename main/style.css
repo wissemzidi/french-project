@@ -62,19 +62,30 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+@keyframes slideOut-toTop {
+  from {
+    opacity: 1;
+    translate: 0;
+  }
+  to {
+    opacity: 0;
+    translate: 0 -100px;
+  }
+}
+
 #aside {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   min-height: 50vh;
+  height: fit-content;
   padding-inline: 0.5rem;
   padding-block: 0.5rem;
   padding-bottom: 2rem;
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0) 70%,
-    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0) 90%,
     rgba(255, 255, 255, 0)
   );
   backdrop-filter: blur(2px);
@@ -93,7 +104,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 #aside li {
   min-width: 9rem;
-  padding-block: 0.6rem;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.5);
   transition: 0.2s ease-out color, 0.2s ease-out background-color,
@@ -105,6 +115,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #aside a {
+  padding-block: 0.8rem;
   text-indent: 1rem;
   color: whitesmoke;
   text-decoration: none;
@@ -228,6 +239,20 @@ header > div {
   }
 }
 
+.section1_btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.3s ease-out background-color, color 0.3s ease-out;
+}
+.section1_btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
 /* 
 
 
@@ -241,16 +266,33 @@ header > div {
 
 */
 /** section2 */
-#section2 .content img {
+#section2 .content .project {
+  position: relative;
+  width: 90%;
+  aspect-ratio: 16 / 9;
   max-width: 40rem;
   border-radius: 20px;
   transition: ease-out scale 0.3s, border-radius ease-out 0.3s;
 }
-#section2 .content img:hover {
-  border-radius: 10px;
-  scale: 1.05;
+#section2 .content .project::before {
+  content: "";
+  border-radius: 20px;
+  position: absolute;
+  inset: 0;
+  right: 2.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
+#section2 .content .project:nth-child(2)::before {
+  background-image: url("../yessin_bahrini/preview.jpg");
+}
+#section2 .content .project:hover {
+  scale: 1.04;
+}
+#section2 .content .project a {
+  height: 100%;
+}
 /*
 
 
